@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/standings-apex.css">
+	<title>Document</title>
+</head>
+<body>
+	<table id="tbl_updaterSettings">
+		<tr>
+			<td>Setting</td>
+			<td>Value</td>
+		</tr>
+		<tr>
+			<td>spreadsheetID</td>
+			<td><input id="in_spreadsheetId" type="text"></td>
+		</tr>
+		<tr>
+			<td>worksheetName</td>
+			<td><input id="in_worksheetName" type="text"></td>
+		</tr>
+		<tr>
+			<td>apiKey</td>
+			<td><input id="in_apiKey" type="text"></td>
+		</tr>
+		<tr>
+			<td>updateInterval</td>
+			<td><input type="number" id="in_updateInterval"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onclick="update_Values()">UpdateValues</button></td>
+		</tr>
+	</table>
+	<div class="dv_guide">
+		<h2>spreadsheetID</h2>
+		<p>This is the <a href="https://developers.google.com/sheets/api/guides/concepts#spreadsheet_id">ID of the spreadsheet</a>, as given in the URL of the Google Sheets page for that spreadsheet. It's usually a long alphanumeric string.</p>
+		<p>The system used by this updater can only access public spreadsheets, so make sure that your spreadsheet is set to at least 'Anyone with the link can view'. If it's private, the API will throw an error and your overlay won't be able to update.</p>
+		<h2>worksheetName</h2>
+		<p>This is the name of the worksheet inside the spreadsheet document (ie, corresponding to the tab along the bottom that you'd click to get to that worksheet in the desktop web UI)</p>
+		<h2>apiKey</h2>
+		<p>This is an API key for the script to use when it accesses the Google Sheets API. You need to generate one of these with Google yourself at <a href="https://console.cloud.google.com/apis/credentials">this page</a>. There's more information on that <a href="https://cloud.google.com/docs/authentication/api-keys#creating_an_api_key">here</a>, or a <a href="https://developers.google.com/maps/documentation/embed/get-api-key#get-the-api-key">slightly more in-depth guide</a> on the Google Maps documentation. You might have to create a new project before you can generate one.</p>
+		<p>Either way, make sure you've got the Google Sheets API enabled for the project containing your key - you can do it <a href="https://console.cloud.google.com/apis/library/sheets.googleapis.com">here</a> with your project selected in the top bar.</p>
+		<h2>updateInterval</h2>
+		<p>This is simply the interval in milliseconds at which the updater should grab the latest info from the Google Sheet. For example, if updateInterval is set to 3000, the overlay will be updated every 3 seconds (3000 milliseconds).</p>
+	</div>
+	<table>
+		<tr>
+			<td>Playername</td>
+			<td> <input type="text" class="in_name in_text" id="in_playername"> </td>
+			<td> <button onclick="update_PlayerName()">Update</button> </td>
+		</tr>
+	</table>
+	<script src="js/standings-apex.js"></script>
+</body>
+</html>
