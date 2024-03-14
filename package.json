@@ -1,0 +1,56 @@
+{
+  "name": "vg-lan-apex",
+  "version": "0.0.0",
+  "description": "Visiongaming Lan 2024 Apex Bundle",
+  "homepage": "https://visiongaming.ch/",
+  "author": {
+    "name": "jschuler",
+    "email": "jeremy.schuler@vjss.ch",
+    "url": "https://vjss.ch"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "apex",
+    "vg",
+    "lan",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^2.0.0",
+    "graphics": [
+      {
+        "file": "standings_apex.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      }
+    ],
+    "dashboardPanels": [
+      {
+        "name": "standings-apex",
+        "title": "Standings Apex",
+        "file": "standings-apex.html",
+        "fullbleed": true,
+        "headerColor": "#525F78"
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "license": "MIT"
+}
