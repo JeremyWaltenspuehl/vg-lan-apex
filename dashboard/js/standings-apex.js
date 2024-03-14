@@ -22,3 +22,7 @@ rpl_GraphicsUpdaterRequirements.on('change', () => {
 rpl_PlayerName.on('change', () => {
     document.getElementById('in_playername').value = rpl_PlayerName.value
 })
+
+function startScoreboard(){
+    nodecg.sendMessage('startScoreboard')
+}
