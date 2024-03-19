@@ -34,7 +34,17 @@ td{
     padding-bottom: 5px;
     text-align: center;
     border-top: 1px black solid;
+    border-left: 1px black solid;
 }
 h1 {
     font-size: 40px;
+}
+.sponsor{
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr 0.5fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+align-items: center;
+justify-items: center;
 }
